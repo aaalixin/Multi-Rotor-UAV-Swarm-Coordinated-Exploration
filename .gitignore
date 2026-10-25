@@ -12,6 +12,10 @@ __pycache__/
 # 原始效果视频（163MB，超过 GitHub 单文件限制；仓库使用 docs/ 下压缩版）
 /robocup_gazebo.mp4
 
+# 文档原始截图（仓库使用 docs/ 下副本）
+/1.png
+/2.jpg
+
 # 与本方案运行无关的第三方包 / 旧方案备份
 /src/ego_planner/
 /vision_track_mavros_backup.py

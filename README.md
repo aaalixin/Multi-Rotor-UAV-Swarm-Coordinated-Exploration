@@ -36,7 +36,7 @@
 
 ## 效果演示
 
-[![六机协同巡逻与目标追踪演示](docs/robocup_gazebo_poster.jpg)](docs/robocup_gazebo_demo.mp4)
+[![六机协同巡逻与目标追踪演示](docs/robocup_gazebo_demo.png)](docs/robocup_gazebo_demo.mp4)
 
 ▶ **[观看完整演示视频（约 83 秒，MP4）](docs/robocup_gazebo_demo.mp4)**
 
@@ -83,6 +83,10 @@
 **工作流程**：C++ 节点负责飞行安全与巡逻；视觉节点检测到目标后向 C++ 请求接管，
 C++ 停止发送巡逻指令，由视觉节点完成追踪；目标丢失或追踪结束后，C++ 从最近航点恢复巡逻。
 中央锁协调器维护目标与无人机的绑定关系，各机只处理分配给自己的目标。
+
+![Gazebo 仿真场景与机载相机画面](docs/robocup_gazebo_scene.jpg)
+
+*仿真运行画面：左侧为 6 路机载相机视角，右侧为 Gazebo 场景。*
 
 > 本仓库只包含**机载算法与控制**。Gazebo 世界、PX4 SITL 六机、mavros 与 actor 插件等
 > 仿真资产需另行准备，仓库中不包含。

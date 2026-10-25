@@ -1,0 +1,38 @@
+<launch>
+  <arg name="route_id" default="0"/>  <!-- 路线0-6, 对应contX.py,contX_1..4,contX_6,contX_7 -->
+
+  <!-- 1. Lock 中央节点 (int.py) -->
+  <node pkg="drone_ctrl" type="int.sh" name="lock_manager" output="log"/>
+
+  <!-- 2. Python 视觉追踪 x6 -->
+  <group ns="drone_0">
+    <node pkg="drone_ctrl" type="vision_track.sh" name="vt" output="log">
+      <param name="route_id" value="$(arg route_id)"/>
+    </node>
+  </group>
+  <group ns="drone_1">
+    <node pkg="drone_ctrl" type="vision_track.sh" name="vt" output="log">
+      <param name="route_id" value="$(arg route_id)"/>
+    </node>
+  </group>
+  <group ns="drone_2">
+    <node pkg="drone_ctrl" type="vision_track.sh" name="vt" output="log">
+      <param name="route_id" value="$(arg route_id)"/>
+    </node>
+  </group>
+  <group ns="drone_3">
+    <node pkg="drone_ctrl" type="vision_track.sh" name="vt" output="log">
+      <param name="route_id" value="$(arg route_id)"/>
+    </node>
+  </group>
+  <group ns="drone_4">
+    <node pkg="drone_ctrl" type="vision_track.sh" name="vt" output="log">
+      <param name="route_id" value="$(arg route_id)"/>
+    </node>
+  </group>
+  <group ns="drone_5">
+    <node pkg="drone_ctrl" type="vision_track.sh" name="vt" output="log">
+      <param name="route_id" value="$(arg route_id)"/>
+    </node>
+  </group>
+</launch>

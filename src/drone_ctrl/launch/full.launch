@@ -1,0 +1,17 @@
+<launch>
+  <!-- GPU obstacle detectors -->
+  <group ns="drone_0"><node pkg="gpu_obs" type="gpu_obs_node" name="gpu_obs" output="screen"><param name="drone_id" value="0"/></node></group>
+  <group ns="drone_1"><node pkg="gpu_obs" type="gpu_obs_node" name="gpu_obs" output="screen"><param name="drone_id" value="1"/></node></group>
+  <group ns="drone_2"><node pkg="gpu_obs" type="gpu_obs_node" name="gpu_obs" output="screen"><param name="drone_id" value="2"/></node></group>
+  <group ns="drone_3"><node pkg="gpu_obs" type="gpu_obs_node" name="gpu_obs" output="screen"><param name="drone_id" value="3"/></node></group>
+  <group ns="drone_4"><node pkg="gpu_obs" type="gpu_obs_node" name="gpu_obs" output="screen"><param name="drone_id" value="4"/></node></group>
+  <group ns="drone_5"><node pkg="gpu_obs" type="gpu_obs_node" name="gpu_obs" output="screen"><param name="drone_id" value="5"/></node></group>
+
+  <!-- Drone patrol controllers -->
+  <group ns="drone_0"><node pkg="drone_ctrl" type="simple_explore" name="se" output="screen"><param name="drone_id" value="0"/></node></group>
+  <group ns="drone_1"><node pkg="drone_ctrl" type="simple_explore" name="se" output="screen"><param name="drone_id" value="1"/></node></group>
+  <group ns="drone_2"><node pkg="drone_ctrl" type="simple_explore" name="se" output="screen"><param name="drone_id" value="2"/></node></group>
+  <group ns="drone_3"><node pkg="drone_ctrl" type="simple_explore" name="se" output="screen"><param name="drone_id" value="3"/></node></group>
+  <group ns="drone_4"><node pkg="drone_ctrl" type="simple_explore" name="se" output="screen"><param name="drone_id" value="4"/></node></group>
+  <group ns="drone_5"><node pkg="drone_ctrl" type="simple_explore" name="se" output="screen"><param name="drone_id" value="5"/></node></group>
+</launch>

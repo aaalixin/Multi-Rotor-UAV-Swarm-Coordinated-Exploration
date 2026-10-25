@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(drone_view)
+find_package(catkin REQUIRED COMPONENTS roscpp sensor_msgs cv_bridge image_transport)
+find_package(OpenCV REQUIRED)
+catkin_package()
+include_directories(${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
+add_executable(drone_view src/drone_view.cpp)
+target_link_libraries(drone_view ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})

@@ -1,0 +1,32 @@
+<launch>
+  <group ns="drone_0">
+    <node pkg="drone_ctrl" type="drone_node" name="drone_node" output="screen">
+      <param name="drone_id" value="0"/> <param name="off_x" value="-17"/> <param name="off_y" value="-3"/>
+    </node>
+  </group>
+  <group ns="drone_1">
+    <node pkg="drone_ctrl" type="drone_node" name="drone_node" output="screen">
+      <param name="drone_id" value="1"/> <param name="off_x" value="-14"/> <param name="off_y" value="-3"/>
+    </node>
+  </group>
+  <group ns="drone_2">
+    <node pkg="drone_ctrl" type="drone_node" name="drone_node" output="screen">
+      <param name="drone_id" value="2"/> <param name="off_x" value="-17"/> <param name="off_y" value="0"/>
+    </node>
+  </group>
+  <group ns="drone_3">
+    <node pkg="drone_ctrl" type="drone_node" name="drone_node" output="screen">
+      <param name="drone_id" value="3"/> <param name="off_x" value="-14"/> <param name="off_y" value="0"/>
+    </node>
+  </group>
+  <group ns="drone_4">
+    <node pkg="drone_ctrl" type="drone_node" name="drone_node" output="screen">
+      <param name="drone_id" value="4"/> <param name="off_x" value="-17"/> <param name="off_y" value="3"/>
+    </node>
+  </group>
+  <group ns="drone_5">
+    <node pkg="drone_ctrl" type="drone_node" name="drone_node" output="screen">
+      <param name="drone_id" value="5"/> <param name="off_x" value="-13.5"/> <param name="off_y" value="3"/>
+    </node>
+  </group>
+</launch>
